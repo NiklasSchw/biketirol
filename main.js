@@ -8,7 +8,7 @@ let ibk = {
 
 // Karte initialisieren
 let map = L.map("map", {
-    fullscreenControl: true
+    fullscreenControl: true,
 }).setView([ibk.lat, ibk.lng], 9);
 
 // thematische Layer
@@ -82,3 +82,9 @@ pulldown.onchange = function (evt) {
     console.log(window.location);
     window.location.href = url;
 }
+
+new L.Control.MiniMap(L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
+    attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
+}), {
+    toggleDisplay: true
+}).addTo(map);
