@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Bike Trail Tirol Beispiel</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <!-- Leaflet Providers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
+        integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Leaflet FullScreen -->
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
+
+    <!-- eigene Stile und Hauptskript -->
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h2><i class="fa-solid fa-person-biking"></i> Bike Trail Tirol Beispiel</h2>
+            <nav>
+                <i class="fab fa-github"></i> <a href="https://github.com/webmapping/biketirol">Github</a>
+            </nav>
+        </header>
+        <article>
+            <h1><a href=""></a>Etappe 31: St. Anton - Steeg</h1>
+            <p>Auf dieser 35 Kilometer langen Strecke fahren Sie ausschließlich auf Asphaltwegen und überwinden dabei
+                750 Höhenmeter, wobei mit dem Arlbergpass die höchste Steigung gleich zu Beginn auf Sie wartet.
+                Begleitet werden Sie auf dieser Etappe von schönen Panoramen und stets neuen Einblicken.</p>
+
+            <div class="summary">
+                <div class="summary-badge">
+                    <i class="fas fa-walking"></i> 35 km
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-clock"></i> 3 h
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-sort-amount-up-alt"></i> 750 m
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-mountain"></i> 1.800 m
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-sort-amount-down-alt"></i> 1.080 m
+                </div>
+                <div class="summary-badge">
+                    <i class="fa-solid fa-heart-pulse"></i> Mittelschwierig
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-download"></i>
+                    <a href="data/etappe31.gpx"> Download GPX </a>
+                </div>
+            </div>
+
+            <div id="map"></div>
+
+            <h3>Streckenbeschreibung</h3>
+            <p>In etwa eineinviertel Stunden erreicht man über die Arlbergstraße St. Christoph kurz vor dem Pass. Danach
+                geht es etwa 3 Kilometer abwärts bis zur Abzweigung der Straße nach Zürs und Lech. Durch Lawinengalerien
+                aufwärts radelt man zum Flexenpass, danach wieder leicht abwärts zuerst durch Zürs und weiter über Lech
+                nach Warth (1 Stunde 45 Minuten ab St. Christoph). Hier zweigt man beim Kreisverkehr rechts auf die
+                Lechtalbundesstraße Richtung Reutte ab und bleibt auf dieser bis Steeg (45 Minuten ab Warth). Achtung:
+                Für die Fahrt durch die Lawinengalerien ist eine Beleuchtung des Rades notwendig!</p>
+
+        </article>
+        <footer>
+            <strong>Datenquellen:</strong>
+            <nav>
+                <a href="https://www.tirol.at/reisefuehrer/sport/mountainbiken/bike-trail-tirol">Bike Trail Tirol
+                    (Online Reiseführer Tirol)</a> |
+                <a
+                    href="https://www.tirol.at/reisefuehrer/sport/radfahren/biketouren/a-bike-trail-tirol-st-anton-steeg">Etappe
+                    31: St. Anton - Steeg</a>
+                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol">eGrundkarte
+                    Tirol</a>
+            </nav>
+        </footer>
+    </main>
+</body>
+
+</html>
